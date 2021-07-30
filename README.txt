@@ -7,6 +7,9 @@ Solution State:
 Run Each Heuristic over 500 iterations to compare Average Execution Time.
 Display Sample Solution Path
 
+Execute Program
+-Give Execution Permisions to start_program.sh file -> chmod +x start_program.sh
+
 To Compile from Command Line:
 -Change to the directory to which all of the .java files are located
 -Make sure is included in your path environment variables
