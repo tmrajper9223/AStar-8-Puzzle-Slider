@@ -30,7 +30,7 @@ public class AStar {
 	 * Keeps track of explored States with a HashSet
 	 * Finds smallest path cost from initial state to goal
 	 * @param state
-	 * @return
+	 * @return Solution State Node
 	 */
 	public Node graphSearch(Node state) {
 		Node current = state;
@@ -60,6 +60,9 @@ public class AStar {
 		return null;
 	}
 	
+	/**
+	 * Determines Whether Current State Should Be Added To The Frontier And Calculates Heuristics Based On Input
+	 */
 	public void explore(Node child) {
 		if (child != null && !frontierSet.contains(child.getKey()) && !explored.contains(child.getKey())) {
 			if (heuristic == 1)
@@ -78,6 +81,11 @@ public class AStar {
 		}
 	}
 	
+	/**
+	 * Backtracks From The Solution Node To The Initial State
+	 * @param state
+	 * @return Solution Path
+	 */
 	public ArrayList<Node> getSolutionPath(Node state) {
 		solutionPath.add(state);
 		while (state.getParent() != null) {
@@ -87,6 +95,9 @@ public class AStar {
 		return solutionPath;
 	}
 	
+	/**
+	 * Prints Solution Path To Console
+	 */
 	public void print() {
 		for (int i = solutionPath.size() - 1; i > -1; i--) {
 			solutionPath.get(i).print();

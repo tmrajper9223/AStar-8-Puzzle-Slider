@@ -21,9 +21,13 @@ public class Main {
 		printSolutionPath();
 	}
 	
+	/**
+	 * Executes Both Heuristic Searches And Outputs Execution Time For Both Heuristics
+	 */
 	public static void searches() {
 		int sum = 0;
 		
+		// Heuristic One
 		long sTime = System.currentTimeMillis();
 		for (int i = 0; i < 500; i++) {
 			Node n = new Node();
@@ -40,6 +44,7 @@ public class Main {
 		int heuristicOneAverage = sum / 500;
 		
 		sum = 0;
+		// Heuristic Two
 		sTime = System.currentTimeMillis();
 		for (int i = 0; i < 500; i++) {
 			Node n = new Node();
@@ -65,6 +70,9 @@ public class Main {
 		System.out.println("Average Step Cost for Heuristic Two: " + heuristicTwoAverage);
 	}
 	
+	/**
+	 * Prints Out A Sample Solution Path For Both Heuristics Along With Their Step Costs
+	 */
 	public static void printSolutionPath() {
 		Node n = new Node();
 		while (!n.isValid()) {
