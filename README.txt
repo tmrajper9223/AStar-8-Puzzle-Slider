@@ -1,3 +1,12 @@
+A* Algorithm For 8 Puzzle Slider (Graph Approach)
+Solution State:
+0 | 1 | 2
+3 | 4 | 5
+6 | 7 | 8
+
+Run Each Heuristic over 500 iterations to compare Average Execution Time.
+Display Sample Solution Path
+
 To Compile from Command Line:
 -Change to the directory to which all of the .java files are located
 -Make sure is included in your path environment variables
@@ -10,5 +19,5 @@ Output:
 -Lastly, There will be two solution paths printed out fro both heuristics to view how each algirorithm reached the goal.
 
 Heuristics:
--First heuristci calculates how many tiles are misplaced on the board
+-First heuristic calculates how many tiles are misplaced on the board
 -Seconds heuristic Sums each tile's distance from their goal position.
